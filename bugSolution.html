@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    // Correct way to add an event listener
+    document.getElementById("myDiv").addEventListener("click", function() {
+      alert("This is an alert.");
+    });
+
+    //Avoid using non-existent attributes
+    //Instead, use data attributes or custom attributes if necessary
+
+    //Check if element exists before manipulation
+    const missingElement = document.getElementById("missingElement");
+    if (missingElement) {
+        missingElement.innerHTML = "This will only execute if the element exists.";
+    } else {
+        console.error("Element with id 'missingElement' not found.");
+    }
+  </script>
+</body>
+</html>
