@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error</title>
+</head>
+<body>
+  <p>This is a paragraph.</p>
+  <div id="myDiv"></div>
+
+  <script>
+    //Incorrect way to add event listener
+    document.getElementById("myDiv").onclick = function() {
+      alert("This is an alert.");
+    };
+
+    //Another uncommon error: Using a non-existent attribute 
+    document.getElementById("myDiv").setAttribute("nonExistent", "value");
+
+    //Error in manipulating DOM: missing element
+    document.getElementById("missingElement").innerHTML = "This will cause an error.";
+  </script>
+</body>
+</html>
